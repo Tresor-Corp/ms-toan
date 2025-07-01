@@ -28,6 +28,7 @@ Dự án được tổ chức thành bốn lớp chính để đảm bảo tính
 * **PostgreSQL** (Hệ quản trị cơ sở dữ liệu)
 * **JWT (JSON Web Token)** cho Authentication
 * **Swagger/OpenAPI** cho tài liệu API và thử nghiệm
+* **MediatR
 
 ## Bắt đầu
 
