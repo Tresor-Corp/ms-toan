@@ -63,6 +63,10 @@ Dự án được tổ chức thành bốn lớp chính để đảm bảo tính
         ```
     Ứng dụng sẽ khởi chạy, trên `http://localhost:5000` hoặc `https://localhost:5001`. Swagger UI sẽ tự động mở trong trình duyệt của bạn (nếu cấu hình).
     Database sẽ tự tạo ngay khi run project nên hãy làm theo các bước tại [Cấu hình ConnectionString](#cấu-hình-connectionstring) để có thể kết nối thành công database.
+5. **Đăng Nhập**
+   * Email: captain@email.com
+   * Password: password
+   * Hoặc Bạn có thể tạo account mới thông qua Register API
 
 ## Cấu hình ConnectionString
 
