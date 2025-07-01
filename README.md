@@ -9,20 +9,15 @@ Dự án được tổ chức thành bốn lớp chính để đảm bảo tính
 * **Demo.API:**
     * Lớp trình bày (Presentation Layer).
     * Chứa các API Controllers, cấu hình ứng dụng (như `Program.cs`, `appsettings.json`), và các dịch vụ liên quan đến HTTP.
-    * Đây là điểm vào của ứng dụng.
 * **Demo.Application:**
     * Lớp ứng dụng (Application Layer).
     * Chứa logic nghiệp vụ chính của ứng dụng, các dịch vụ ứng dụng, DTOs (Data Transfer Objects), và các giao diện (interfaces) cho các dịch vụ hạ tầng.
-    * Phụ thuộc vào `Demo.Core`.
 * **Demo.Core:**
     * Lớp lõi (Domain Layer).
-    * Chứa các Domain Entities (mô hình dữ liệu), các Value Objects, Domain Services và các giao diện cốt lõi khác định nghĩa nghiệp vụ của hệ thống.
-    * Là trái tim của ứng dụng, độc lập với các lớp khác.
+    * Chứa các Domain Entities (mô hình dữ liệu), các Value Objects, Repository Interface và các giao diện cốt lõi khác định nghĩa nghiệp vụ của hệ thống.
 * **Demo.Infrastructure:**
     * Lớp hạ tầng (Infrastructure Layer).
     * Chứa các triển khai cụ thể của các giao diện được định nghĩa trong `Demo.Core` và `Demo.Application`.
-    * Bao gồm triển khai Entity Framework Core DbContext, Migrations, Repositories, các dịch vụ bên ngoài (như Email Service, File Storage) và các dịch vụ lấy thông tin người dùng (`ICurrentUserService`).
-    * Phụ thuộc vào `Demo.Core` và `Demo.Application`.
 
 ## Công nghệ Sử dụng
 
@@ -65,7 +60,7 @@ Dự án được tổ chức thành bốn lớp chính để đảm bảo tính
         dotnet run
         ```
     Ứng dụng sẽ khởi chạy, trên `http://localhost:5000` hoặc `https://localhost:5001`. Swagger UI sẽ tự động mở trong trình duyệt của bạn (nếu cấu hình).
-    Database sex tự tạo ngay khi run project nên hãy làm theo các bước tại [Cấu hình ConnectionString](#cấu-hình-connectionstring) để có thể kết nối thành công database.
+    Database sẽ tự tạo ngay khi run project nên hãy làm theo các bước tại [Cấu hình ConnectionString](#cấu-hình-connectionstring) để có thể kết nối thành công database.
 
 ## Cấu hình ConnectionString
 
