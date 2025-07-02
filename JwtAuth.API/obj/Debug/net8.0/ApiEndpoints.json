@@ -1,0 +1,74 @@
+[
+  {
+    "ContainingType": "JwtAuth.API.Controllers.UserController",
+    "Method": "Login",
+    "RelativePath": "api/user/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JwtAuth.Application.Query.LoginQuery",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JwtAuth.Core.Response.BaseResponse\u00601[[JwtAuth.Core.Response.TokenResponse, JwtAuth.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JwtAuth.API.Controllers.UserController",
+    "Method": "GetUserProfile",
+    "RelativePath": "api/user/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "JwtAuth.Core.Response.BaseResponse\u00601[[JwtAuth.Core.Entity.User, JwtAuth.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JwtAuth.API.Controllers.UserController",
+    "Method": "Register",
+    "RelativePath": "api/user/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JwtAuth.Application.Command.CreateUserCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JwtAuth.Core.Response.BaseResponse\u00601[[JwtAuth.Core.Entity.User, JwtAuth.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

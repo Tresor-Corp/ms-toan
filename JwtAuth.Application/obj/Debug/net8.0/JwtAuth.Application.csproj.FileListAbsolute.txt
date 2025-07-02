@@ -1,0 +1,16 @@
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\bin\Debug\net8.0\JwtAuth.Application.deps.json
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\bin\Debug\net8.0\JwtAuth.Application.dll
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\bin\Debug\net8.0\JwtAuth.Application.pdb
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\bin\Debug\net8.0\JwtAuth.Core.dll
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\bin\Debug\net8.0\JwtAuth.Core.pdb
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\obj\Debug\net8.0\JwtAuth.Application.csproj.AssemblyReference.cache
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\obj\Debug\net8.0\JwtAuth.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\obj\Debug\net8.0\JwtAuth.Application.AssemblyInfoInputs.cache
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\obj\Debug\net8.0\JwtAuth.Application.AssemblyInfo.cs
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\obj\Debug\net8.0\JwtAuth.Application.csproj.CoreCompileInputs.cache
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\obj\Debug\net8.0\JwtAuth.Application.sourcelink.json
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\obj\Debug\net8.0\JwtAuth..889A2A29.Up2Date
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\obj\Debug\net8.0\JwtAuth.Application.dll
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\obj\Debug\net8.0\refint\JwtAuth.Application.dll
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\obj\Debug\net8.0\JwtAuth.Application.pdb
+D:\CShaft\API\Demo\DemoAPI\Demo.Application\obj\Debug\net8.0\ref\JwtAuth.Application.dll

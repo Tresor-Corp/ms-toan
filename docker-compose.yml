@@ -1,0 +1,12 @@
+services:
+  db:
+   image: postgres:15-alpine
+   
+  jwtauth.api:
+    image: ${DOCKER_REGISTRY-}jwtauthapi
+    build:
+      context: .
+      dockerfile: JwtAuth.API/Dockerfile
+
+volumes:
+  pgdata:

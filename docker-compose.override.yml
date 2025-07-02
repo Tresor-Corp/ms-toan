@@ -1,0 +1,24 @@
+services:
+  db:
+    container_name: db
+    restart: always
+    environment:
+       POSTGRES_USER: postgres
+       POSTGRES_PASSWORD: "12345"
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  jwtauth.api:
+    container_name: jwtauthapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - "ConnectionStrings__Connection=Host=db;Port=5432;Database=JwtAuth;Username=postgres;Password=12345"
+      - "Authentication__Key=6CBxzdYcEgNDrRhMbDpkBF7e4d4Kib46dwL9ZE5egiL0iL5Y3dzREUBSUYVUwUkN6CBxzdYcEgNDrRhMbDpkBF7e4d4Kib46dwL9ZE5egiL0iL5Y3dzREUBSUYVUwUkN"
+      - "Authentication__Issuer=https://localhost:5000"
+      - "Authentication__Audience=https://localhost:5000"
+      - "Authentication__ExpirationMinutes=60"
+    ports:
+      - "5000:8080"
