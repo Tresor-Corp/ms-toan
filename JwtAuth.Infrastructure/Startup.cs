@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,17 @@ namespace JwtAuth.Infrastructure
     {
         public static IServiceCollection AddInfrastructureService(this IServiceCollection services, IConfiguration config)
         {
-            services.AddDbContext<ApplicationDbContext>(option => option.UseNpgsql(config.GetConnectionString("Connection")));
+            var rawConString = config.GetConnectionString("DB_URL");
+            var uri = new Uri(rawConString);
+
+            var username = uri.UserInfo.Split(':')[0];
+            var password = uri.UserInfo.Split(':')[1];
+            var host = uri.Host;
+            var port = uri.Port;
+            var database = uri.AbsolutePath.Trim('/');
+
+            var connectionString = $"Host={host};Port={port};Database={database};Username={username};Password={password}";
+            services.AddDbContext<ApplicationDbContext>(option => option.UseNpgsql(connectionString));
             services.AddTransient<DatabaseInitializer>();
             services.Configure<AuthSetting>(config.GetSection("Authentication"));
             services.AddAuthorization();

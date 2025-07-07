@@ -108,8 +108,6 @@ namespace JwtAuth.Infrastructure.Repository
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_setting.Key));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
-            // Các Claims (thông tin về người dùng) sẽ được nhúng vào token
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
