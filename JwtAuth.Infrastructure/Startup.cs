@@ -20,7 +20,7 @@ namespace JwtAuth.Infrastructure
     {
         public static IServiceCollection AddInfrastructureService(this IServiceCollection services, IConfiguration config)
         {
-            var rawConString = config.GetConnectionString("DATABASE_URL");
+            var rawConString = config.GetValue<String>("DATABASE_URL");
             var uri = new Uri(rawConString);
 
             var username = uri.UserInfo.Split(':')[0];
