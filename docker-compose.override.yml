@@ -15,7 +15,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8080
-      - "ConnectionStrings__DB_URL=postgresql://postgres:12345@db:5432/JwtAuth"
+      - "ConnectionStrings__DATABASE_URL=postgresql://postgres:12345@db:5432/JwtAuth"
       - "Authentication__Key=6CBxzdYcEgNDrRhMbDpkBF7e4d4Kib46dwL9ZE5egiL0iL5Y3dzREUBSUYVUwUkN6CBxzdYcEgNDrRhMbDpkBF7e4d4Kib46dwL9ZE5egiL0iL5Y3dzREUBSUYVUwUkN"
       - "Authentication__Issuer=https://localhost:5000"
       - "Authentication__Audience=https://localhost:5000"

@@ -61,6 +61,7 @@ Dự án được tổ chức thành bốn lớp chính để đảm bảo tính
 4.  **Truy cập ứng dụng:**
     * API sẽ khả dụng tại `http://localhost:5000`.
     * Bạn có thể truy cập Swagger UI tại `http://localhost:5000/swagger/index.html` để xem tài liệu API và thử nghiệm các endpoint.
+    * Healcheck `http://localhost:5000/api/healthz`
 
 5.  **Đăng Nhập**
     * Email: `captain@email.com`
