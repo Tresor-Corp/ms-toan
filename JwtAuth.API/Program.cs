@@ -51,7 +51,7 @@ builder.Services.AddInfrastructureService(builder.Configuration);
 builder.Services.AddMediatrApplication();
 builder.Services.AddHealthChecks();
 var app = builder.Build();
-app.Services.InitializeDatabasesAsync().Wait();
+//app.Services.InitializeDatabasesAsync().Wait();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

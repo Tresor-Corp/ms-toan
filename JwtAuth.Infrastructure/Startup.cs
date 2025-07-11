@@ -21,12 +21,15 @@ namespace JwtAuth.Infrastructure
         public static IServiceCollection AddInfrastructureService(this IServiceCollection services, IConfiguration config)
         {
             var rawConString = Environment.GetEnvironmentVariable("DATABASE_URL");
+            if (rawConString == null) {
+                rawConString = config.GetValue<String>("DATABASE_URL");
+            }
             var uri = new Uri(rawConString);
 
             var username = uri.UserInfo.Split(':')[0];
             var password = uri.UserInfo.Split(':')[1];
             var host = uri.Host;
-            var port = uri.Port;
+            var port = uri.IsDefaultPort ? 5432 : uri.Port;
             var database = uri.AbsolutePath.Trim('/');
 
             var connectionString = $"Host={host};Port={port};Database={database};Username={username};Password={password}";
